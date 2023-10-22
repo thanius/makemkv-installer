@@ -20,9 +20,8 @@ fi
 # Download the page
 DOWNLOAD=$(curl -s "$PAGE")
 
-# Get APT command and required packages
-APT=$(echo "$DOWNLOAD"|grep -m1 -oP '(?<=<code>).*(?=</code>)')
-PACKAGES=$(echo "$APT"|grep -oP '(?<=sudo apt-get install).*')
+# Get required packages
+PACKAGES=$(echo "$DOWNLOAD"|grep -m1 -oP '(?<=<code>sudo apt-get install).*(?=</code>)')
 
 # Check if packages are installed and install as required
 for PKG in $PACKAGES; do
