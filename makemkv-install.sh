@@ -5,7 +5,7 @@
 # VERSION: 1.2
 
 # Change this whenever the path has been moved
-# Chouldn't be that often
+# Shouldn't be that often
 PAGE="https://forum.makemkv.com/forum/viewtopic.php?f=3&t=224"
 
 # Regex for fetching download URLs
